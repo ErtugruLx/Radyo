@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Anamakine: localhost
--- Üretim Zamanı: 07 Ağu 2017, 17:19:36
+-- Üretim Zamanı: 11 Ağu 2017, 11:06:52
 -- Sunucu sürümü: 5.7.19-0ubuntu0.16.04.1
 -- PHP Sürümü: 7.0.18-0ubuntu0.16.04.1
 
@@ -28,10 +28,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `radyo` (
   `radyoid` int(11) NOT NULL,
-  `radyoismi` varchar(100) NOT NULL,
+  `radyoisim` varchar(100) NOT NULL,
   `radyourl` varchar(400) NOT NULL,
   `radyofotograf` varchar(400) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Tablo döküm verisi `radyo`
+--
+
+INSERT INTO `radyo` (`radyoid`, `radyoisim`, `radyourl`, `radyofotograf`) VALUES
+(1, 'Best FM', 'http://46.20.7.125/listen.pls', 'http://www.bestfm.com.tr/Content/img/bestfm-logo.png'),
+(2, 'Joy Turk', 'http://provisioning.streamtheworld.com/pls/JOY_TURKAAC.pls', 'https://mediacdns.karnaval.com/media/station_media/4/logos/logo_web_female.png?v=240717060325');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -51,7 +59,7 @@ ALTER TABLE `radyo`
 -- Tablo için AUTO_INCREMENT değeri `radyo`
 --
 ALTER TABLE `radyo`
-  MODIFY `radyoid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `radyoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
